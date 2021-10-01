@@ -14,8 +14,6 @@ namespace Treasure_Island_I
                     new char[] { 'O', 'O', 'O', 'O' },
                     new char[] { 'X', 'D', 'D', 'O' }};
 
-
-
             Console.WriteLine(treasureIsland(arr));
         }
 
@@ -58,11 +56,6 @@ namespace Treasure_Island_I
 
                         if (isSafe(island, newX, newY) && !visited[newX, newY])
                         {
-                            //    if(island[newX][newY] == 'X')
-                            //    {
-                            //        return steps;
-                            //    }
-
                             //Console.WriteLine("Enqueue: " + newX + "    " + newY + "  Steps: " + steps);
                             queue.Enqueue(Tuple.Create(newX, newY, steps + 1));
                             visited[newX, newY] = true;
